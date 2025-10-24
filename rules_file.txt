@@ -1,0 +1,22 @@
+# API Validation Rules
+
+## Rule 1.1: Resource Naming
+- All resource names **must** be plural nouns (e.g., `/users`, `/orders`).
+- Names should use lowercase and hyphens (`-`) instead of underscores.
+
+## Rule 1.2: Versioning
+- The API **must** include a version segment in the base path (e.g., `/v1/`).
+
+## Rule 1.3: HTTP Methods
+- Each operation must use the correct HTTP verb.
+  - `GET` for retrieval, `POST` for creation, `PUT` for full update, `PATCH` for partial update, `DELETE` for removal.
+
+## Rule 1.4: Standardized Response Codes
+- Use standard HTTP response codes consistently:
+  - 200 for success, 201 for creation, 400 for bad request, 404 for not found, 500 for server error.
+
+## Rule 1.5: Error Schema
+- Error responses should include:
+  - `code` (string)
+  - `message` (string)
+  - `timestamp` (ISO 8601)

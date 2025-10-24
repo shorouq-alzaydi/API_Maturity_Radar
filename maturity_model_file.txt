@@ -1,0 +1,23 @@
+# API Maturity Model Definition
+
+## Level 0: Basic
+- APIs expose endpoints but may not follow REST principles.
+- No versioning or consistent naming patterns.
+
+## Level 1: Resource-Oriented
+- Endpoints represent distinct resources.
+- Uses nouns instead of verbs in URLs.
+- Basic use of HTTP methods.
+
+## Level 2: Standardized REST
+- Correct use of HTTP verbs and status codes.
+- Standardized error handling.
+- Basic documentation is available.
+- Versioning is implemented.
+
+## Level 3: Advanced REST
+- Hypermedia links (HATEOAS) used where appropriate.
+- Consistent pagination and filtering conventions.
+- Reusable schemas across resources.
+- Comprehensive, machine-readable documentation.
+
