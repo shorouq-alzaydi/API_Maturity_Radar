@@ -45,19 +45,4 @@ python radar.py rules.md maturity_model.md api.yaml > report.json
 ### Example Output
 
 ```json
-{
-  "assessment_date": "2025-10-24",
-  "determined_rmm_level": "Level 2",
-  "final_maturity_level": "Standardized REST",
-  "overall_analysis_summary": "The API follows REST principles and implements versioning, but lacks hypermedia features required for Level 3.",
-  "governance_compliance": {
-    "total_requirements_checked": 5,
-    "total_violations_found": 1,
-    "violations_list": [
-      {
-        "requirement_violated": "Rule 1.3: Error Schema",
-        "reasoning_and_location": "Error responses do not include a standardized schema."
-      }
-    ]
-  }
-}
+{"Assessment Date": "2025-10-24", "Maturity Level": "Level 1", "Final Maturity Level": "Level 1: Resource-Oriented", "Analysis Summary": "The API achieves a maturity level of 1: Resource-Oriented because it represents distinct resources, uses nouns instead of verbs in URLs, and demonstrates basic use of HTTP methods. However, it lacks versioning in the base path, which is a requirement for Level 2. Additionally, while the API uses correct HTTP verbs and status codes, it does not fully comply with all validation rules, such as including a standardized error schema and versioning. Thus, it does not meet the criteria for higher maturity levels.", "Governance Compliance": {"Total Rules Checked": 5, "Total Violations Found": 2, "Violations List": [{"Rules Violated": "Rule 1.2: Versioning", "Reason & Location": "The base path does not include a version segment (e.g., /v1/)."}, {"Rules Violated": "Rule 1.5: Error Schema", "Reason & Location": "Error responses do not include the required schema with code, message, and timestamp."}]}}
